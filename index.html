@@ -1,10 +1,10 @@
-<!DOCTPE html>
 <html>
     <head>
        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width", initial-scale="1">
         <title>금준호 포트폴리오</title>
-        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="./css/bootstrap.css">
+        <script src="./data.js"></script>
         <script type="text/javascript">
             function orderChange()
             {
@@ -17,6 +17,11 @@
                 {
                     location.href='./index.php';
                 }
+            }
+
+            console.log(data)
+            function loadData(){
+
             }
         </script>
     </head>
@@ -72,200 +77,6 @@
                                 </div>
                             </div>
                         
-                            <div class='row alert alert-dark'>
-                                <div class='col-sm-4 embed-responsive embed-responsive-16by9'>
-                                    <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/mxYkRXHMbRI'></iframe>
-                                </div>
-                                <div class='col'>
-                                    <h5><strong>역행렬 출력 프로그램(콘솔)</strong><span class='badge badge-pill badge-secondary'>개인 프로젝트</span></h5>
-                                    <h6>사용자의 입력을 받은 후 입력에 해당하는 랜덤한 행렬을 만들어 가우스 조던 방식을 이용해 역행렬을 출력하는 프로그램입니다.</h6>
-                                    <p style='margin:8px;'>제작기간 : 1주, 제작시기 : 2019년 4월</p>
-                                    <hr class='my-1'/>
-                                    <span class='badge badge-secondary'>C</span>
-                                </div>
-                            </div>
-                        
-                            <div class='row alert alert-dark'>
-                                <div class='col-sm-4 embed-responsive embed-responsive-16by9'>
-                                    <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/BH026AOS32s'></iframe>
-                                </div>
-                                <div class='col'>
-                                    <h5><strong>가사 PPT 생성 프로그램(WPF)</strong><span class='badge badge-pill badge-secondary'>개인 프로젝트</span></h5>
-                                    <h6>노래를 검색하면 네이버 뮤직에서 목록을 가져옵니다. 노래를 선택한뒤 가사의 레이아웃을 잡아주면 PPT로 만들어주는 프로그램 입니다. MVVM 디자인 패턴이 적용되어 있습니다.한번 만든 노래 가사는 DB에 저장이 되며 Rest AP, json 을 통해 통신합니다.</h6>
-                                    <p style='margin:8px;'>제작기간 : 1주, 제작시기 : 2018년 11월</p>
-                                    <hr class='my-1'/>
-                                    <span class='badge badge-secondary'>C#,PHP,MariaDB,MVVM</span>
-                                </div>
-                            </div>
-                        
-                            <div class='row alert alert-dark'>
-                                <div class='col-sm-4 embed-responsive embed-responsive-16by9'>
-                                    <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/MmC_1kL6Vig'></iframe>
-                                </div>
-                                <div class='col'>
-                                    <h5><strong>교실 컴퓨터 제어 및 게임 종료 프로그램(WPF)</strong><span class='badge badge-pill badge-secondary'>팀 프로젝트</span></h5>
-                                    <h6>교실에서 선생님이 학생들의 화면을 끌 수 있으며 다시 킬 수도 있습니다.<br/>학생들이 진행중인 게임을 종료 할 수 있습니다.<br/>저희 학교 한정으로 모든 학생이 회원가입 없이 어떤 학생이 어떤 게임을 하는지 교수님이 알 수 있습니다. 로그인을 하지 않아도 화면 및 게임 제어는 사용 할 수 있습니다.서버 및 클라이언트들의 로직을 담당하였습니다. MVVM 디자인 패턴이 적용되어 있습니다. Socket 으로 통신을 하도록 되어 있습니다.</h6>
-                                    <p style='margin:8px;'>제작기간 : 1개월, 제작시기 : 2018년 9월</p>
-                                    <hr class='my-1'/>
-                                    <span class='badge badge-secondary'>C#,MVVM</span>
-                                </div>
-                            </div>
-                        
-                            <div class='row alert alert-dark'>
-                                <div class='col-sm-4 embed-responsive embed-responsive-16by9'>
-                                    <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/DcWQHDUXAgU'></iframe>
-                                </div>
-                                <div class='col'>
-                                    <h5><strong>리그 오브 레전드 전적 검색기(WPF)</strong><span class='badge badge-pill badge-secondary'>개인 프로젝트</span></h5>
-                                    <h6>'롤' 게임에서 아군의 전적을 자동적으로 찾아서 알려주는 프로그램입니다. 메모리에 접근하지 않으며 이미지 인식으로 모든 글자 및 챔피언을 인식 합니다.MVVM 디자인 패턴이 적용되어 있습니다. API 요청 수를 줄이기 위해 직접 DB를 구축하여 Rest API로 데이터를 받아옵니다.</h6>
-                                    <p style='margin:8px;'>제작기간 : 2개월, 제작시기 : 2018년 7월</p>
-                                    <hr class='my-1'/>
-                                    <span class='badge badge-secondary'>C#,PHP,MariaDB,MVVM</span>
-                                </div>
-                            </div>
-                        
-                            <div class='row alert alert-dark'>
-                                <div class='col-sm-4 embed-responsive embed-responsive-16by9'>
-                                    <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/DB4oatFg8hc'></iframe>
-                                </div>
-                                <div class='col'>
-                                    <h5><strong>가맹점의 회원 관리 프로그램(WPF)</strong><span class='badge badge-pill badge-secondary'>외주 프로젝트</span></h5>
-                                    <h6>가맹점들의 회원 쿠폰 관리 프로그램입니다. 매장에 있는 태블릿과 통신을 하며 태블릿에서 회원들이 자신의 전화번호를 입력할 경우 매장의 컴퓨터로 쿠폰 적립 요청이 나타나게 됩니다. 회원들이 직접전화번호를 입력하지 않아도 매장에서 자체적으로 쿠폰을 발행하거나 찍어줄 수 있습니다.</h6>
-                                    <p style='margin:8px;'>제작기간 : 1개월, 제작시기 : 2018년 2월</p>
-                                    <hr class='my-1'/>
-                                    <span class='badge badge-secondary'>C#</span>
-                                </div>
-                            </div>
-                        
-                            <div class='row alert alert-dark'>
-                                <div class='col-sm-4 embed-responsive embed-responsive-16by9'>
-                                    <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/lvWWZens1j0'></iframe>
-                                </div>
-                                <div class='col'>
-                                    <h5><strong>가상화폐 자동 매매 프로그램(콘솔)</strong><span class='badge badge-pill badge-secondary'>개인 프로젝트</span></h5>
-                                    <h6>가상화폐의 가격은 수시로 올랐다 떨어졌다 합니다. 상대적으로 호가의 단위가 큰 가상화폐로 한 호가가 올라가기 직전에 구입을 한 다음 바로 다음 호가에 판매를 하는 프로그램입니다.<br/>만약 호가가 다시 떨어지려고 한다면 그냥 원래의 가격에 팔아 버립니다.<br/>한마디로 초단타 자동 매매 프로그램입니다.</h6>
-                                    <p style='margin:8px;'>제작기간 : 1주일, 제작시기 : 2017년 12월</p>
-                                    <hr class='my-1'/>
-                                    <span class='badge badge-secondary'>C#</span>
-                                </div>
-                            </div>
-                        
-                            <div class='row alert alert-dark'>
-                                <div class='col-sm-4 embed-responsive embed-responsive-16by9'>
-                                    <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/_9wv3TUQraA'></iframe>
-                                </div>
-                                <div class='col'>
-                                    <h5><strong>아희 인터프리터(콘솔)</strong><span class='badge badge-pill badge-secondary'>개인 프로젝트</span></h5>
-                                    <h6>난해한 한글 언어인 아희의 인터프리터(실행) 프로그램입니다. 초성은 행동을 중성은 프로그램의 흐름을 종성은 입출력을 담당합니다. 자세한 설명은 <a href = "https://namu.wiki/w/%EC%95%84%ED%9D%AC">여기</a>를 클릭하세요.</h6>
-                                    <p style='margin:8px;'>제작기간 : 2일, 제작시기 : 2017년 1월</p>
-                                    <hr class='my-1'/>
-                                    <span class='badge badge-secondary'>JAVA</span>
-                                </div>
-                            </div>
-                        
-                            <div class='row alert alert-dark'>
-                                <div class='col-sm-4 embed-responsive embed-responsive-16by9'>
-                                    <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/9AsyKjTO5FQ'></iframe>
-                                </div>
-                                <div class='col'>
-                                    <h5><strong>오셀로 온라인 게임(안드로이드)</strong><span class='badge badge-pill badge-secondary'>팀 프로젝트</span></h5>
-                                    <h6>오셀로 게임을 제작하였습니다. 서버가 현재 서비스 종료되어 온라인은 사용이 불가 합니다. 자신의 점수 및 승률이 있으며 스킨(돌의 이미지)을 변경이 가능합니다. 저는 서버 및 클라이언트의 로직을 담당하였습니다.</h6>
-                                    <p style='margin:8px;'>제작기간 : 5개월, 제작시기 : 2016년 7월</p>
-                                    <hr class='my-1'/>
-                                    <span class='badge badge-secondary'>JAVA</span>
-                                </div>
-                            </div>
-                        
-                            <div class='row alert alert-dark'>
-                                <div class='col-sm-4 embed-responsive embed-responsive-16by9'>
-                                    <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/i9sWQfhB1Og'></iframe>
-                                </div>
-                                <div class='col'>
-                                    <h5><strong>단어장 웹 페이지(웹)</strong><span class='badge badge-pill badge-secondary'>개인 프로젝트</span></h5>
-                                    <h6>영어 단어들을 검색을 해두면 단어장에 자동으로 들어가며 오늘 검색한 단어들을 모아서 볼 수 있으며 다 본뒤엔 시험이 가능합니다. 시험은 오늘 단어들이 나오게 되며 지난 날들에 추가한 단어들도 시험 볼 수 있습니다.</h6>
-                                    <p style='margin:8px;'>제작기간 : 1일, 제작시기 : 2016년 3월</p>
-                                    <hr class='my-1'/>
-                                    <span class='badge badge-secondary'>PHP,Mysql</span>
-                                </div>
-                            </div>
-                        
-                            <div class='row alert alert-dark'>
-                                <div class='col-sm-4 embed-responsive embed-responsive-16by9'>
-                                    <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/gTD549Sg8Cs'></iframe>
-                                </div>
-                                <div class='col'>
-                                    <h5><strong>apperz 팀 페이지(웹)</strong><span class='badge badge-pill badge-secondary'>팀 프로젝트</span></h5>
-                                    <h6>청소년 개발 팀 apperz의 창립 맴버로써 당시 팀 페이지인 apperz 메인 홈페이지입니다. 현재의 홈페이지는 <a href = "https://www.apperz.co.kr">다음</a>으로 변경 되었습니다.</h6>
-                                    <p style='margin:8px;'>제작기간 : 2주, 제작시기 : 2016년 1월</p>
-                                    <hr class='my-1'/>
-                                    <span class='badge badge-secondary'>PHP</span>
-                                </div>
-                            </div>
-                        
-                            <div class='row alert alert-dark'>
-                                <div class='col-sm-4 embed-responsive embed-responsive-16by9'>
-                                    <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/1WTup9IKNZg'></iframe>
-                                </div>
-                                <div class='col'>
-                                    <h5><strong>십이장기 인공지능(웹)</strong><span class='badge badge-pill badge-secondary'>개인 프로젝트</span></h5>
-                                    <h6>더 지니어스에 나온 십이장기와 규칙이 동일한 십이장기 게임입니다. 스스로 기계학습하는 인공지능과 대결도 할 수 있으며 인공지능의 로직은 다른 학습 라이브러리나 모델을 가지고 온것이 아닌 제가 생각해낸 방법을 직접 코딩을 하였습니다. 대부분의 초등학생을 이기는 정도의 실력입니다.</h6>
-                                    <p style='margin:8px;'>제작기간 : 3주, 제작시기 : 2015년 10월</p>
-                                    <hr class='my-1'/>
-                                    <span class='badge badge-secondary'>PHP,Mysql,JS</span>
-                                </div>
-                            </div>
-                        
-                            <div class='row alert alert-dark'>
-                                <div class='col-sm-4 embed-responsive embed-responsive-16by9'>
-                                    <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/POdnNfOwDhU'></iframe>
-                                </div>
-                                <div class='col'>
-                                    <h5><strong>ishread 파일 공유 서비스(웹)</strong><span class='badge badge-pill badge-secondary'>개인 프로젝트</span></h5>
-                                    <h6>파일들을 쉽고 간편하게 공유를 할 수 있는 서비스입니다. 원하는 파일을 찾거나 이미 다른 사람이 공유해준 코드로 파일에 접근이 가능합니다. 로그인이 필요하지 않은 서비스로 간단한 링크로 파일을 공유할 수 도 있습니다.</h6>
-                                    <p style='margin:8px;'>제작기간 : 1개월, 제작시기 : 2015년 7월</p>
-                                    <hr class='my-1'/>
-                                    <span class='badge badge-secondary'>PHP,Mysql,JS</span>
-                                </div>
-                            </div>
-                        
-                            <div class='row alert alert-dark'>
-                                <div class='col-sm-4 embed-responsive embed-responsive-16by9'>
-                                    <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/-7SjnBrdkGI'></iframe>
-                                </div>
-                                <div class='col'>
-                                    <h5><strong>소설 공유 플랫폼(웹)</strong><span class='badge badge-pill badge-secondary'>개인 프로젝트</span></h5>
-                                    <h6>사용자들이 손쉽게 소설을 쓰고 공유를 할 수 있는 플랫폼입니다. 누구나 소설을 쓸 수 있으며 또 누구나 읽을 수 있습니다. 추가적으로 카카오스토리에 공유를 할 수 있는 기능도 있습니다.</h6>
-                                    <p style='margin:8px;'>제작기간 : 2개월, 제작시기 : 2014년 10월</p>
-                                    <hr class='my-1'/>
-                                    <span class='badge badge-secondary'>PHP,Mysql</span>
-                                </div>
-                            </div>
-                        
-                            <div class='row alert alert-dark'>
-                                <div class='col-sm-4 embed-responsive embed-responsive-16by9'>
-                                    <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/CnC6hdWxUno'></iframe>
-                                </div>
-                                <div class='col'>
-                                    <h5><strong>Jrabbit 가수 어플리케이션(안드로이드)</strong><span class='badge badge-pill badge-secondary'>개인 프로젝트</span></h5>
-                                    <h6>가수 J Rabbit의 정보들을 모아둔 어플입니다. 가수들의 유튜브나 라디오를 들을 수 있으며 스케줄 확인도 가능합니다. 페이스북이나 공식 홈페이지로 접속 할 수 있는 기능도 있습니다.</h6>
-                                    <p style='margin:8px;'>제작기간 : 3개월, 제작시기 : 2013년 9월</p>
-                                    <hr class='my-1'/>
-                                    <span class='badge badge-secondary'>JAVA</span>
-                                </div>
-                            </div>
-                        
-                            <div class='row alert alert-dark'>
-                                <div class='col-sm-4 embed-responsive embed-responsive-16by9'>
-                                    <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/J4xVnsC-Zcw'></iframe>
-                                </div>
-                                <div class='col'>
-                                    <h5><strong>달품,저장된 라디오 듣기 서비스(웹)</strong><span class='badge badge-pill badge-secondary'>개인 프로젝트</span></h5>
-                                    <h6>가수 J Rabbit의 라디오 방송(달품) 다시 듣기 서비스입니다. J Rabbit 앱에 사용하기 위해 만들었지만 웹 특성상 따로 서비스가 가능한 점을 이용해 웹페이지 접속만으로 해당 라디오를 들을 수 있게 해두었습니다.</h6>
-                                    <p style='margin:8px;'>제작기간 : 1주, 제작시기 : 2013년 9월</p>
-                                    <hr class='my-1'/>
-                                    <span class='badge badge-secondary'></span>
-                                </div>
-                            </div>
                                         
             </div>
         </div>

@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width" , initial-scale="1">
     <title>금준호 포트폴리오</title>
     <link rel="stylesheet" href="./css/bootstrap.css">
-
-    <header src='./card.html'></header>
-
     <script src="./data.js"></script>
     <script type="text/javascript">
         function orderChange() {
@@ -20,31 +17,46 @@
             }
         }
 
-        console.log(data)
         function loadData() {
-
+            var projectList = document.getElementById('projectList')
+            for (var proejct of this.portfolioData) {
+                projectList.appendChild(new ProjectCard(proejct))
+            }
         }
 
         class ProjectCard extends HTMLElement {
+            proejctData = {}
+
             attributes = [
-                'youtube',
+                'url',
                 'title',
-                'subject',
-                'description',
-                'time',
-                'tag'
+                'type',
+                'explanation',
+                'date',
+                'language'
             ]
 
+            constructor(proejct) {
+                super()
+                this.proejctData = proejct
+            }
+
             connectedCallback() {
-                this.appendChild(cardTempalte.content.cloneNode(true))
+                this.attachShadow({ mode: 'open' })
+
+                this.shadowRoot.appendChild(cardTempalte.content.cloneNode(true))
                 for (var attribute of this.attributes) {
-                    var elements = this.getElementsByClassName(attribute)
-                    if (elements.length === 0) {
+                    var elements = this.shadowRoot.getElementById(attribute)
+                    if (!elements) {
                         console.warn(`${elements} is not found`)
                         continue
                     }
 
-                    elements[0].innerText = this.getAttribute(attribute)
+                    if (attribute === 'url') {
+                        elements.setAttribute('src', this.proejctData[attribute])
+                        continue
+                    }
+                    elements.innerText = this.proejctData[attribute]
                 }
             }
         }
@@ -53,23 +65,24 @@
     </script>
 </head>
 
-<body>
-    <template id="cardTempalte" names='iubns'>
+<body onload="loadData()">
+    <template id="cardTempalte">
+        <link rel="stylesheet" href="./css/bootstrap.css">
         <div class="container bs-docs-container">
 
             <div class='row alert alert-dark'>
                 <div class='col-sm-4 embed-responsive embed-responsive-16by9'>
-                    <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/AI8HsfWP4B8'></iframe>
+                    <iframe class='embed-responsive-item' id='url'></iframe>
                 </div>
                 <div class='col'>
                     <h5>
-                        <strong class='title'>title</strong>
-                        <span class='badge badge-pill badge-secondary subject'>subject</span>
+                        <strong id='title'></strong>
+                        <span class='badge badge-pill badge-secondary type'></span>
                     </h5>
-                    <h6 class="description"></h6>
-                    <p style='margin:8px;' class="time"></p>
+                    <h6 id="explanation"></h6>
+                    <p style='margin:8px;' id="date"></p>
                     <hr class='my-1' />
-                    <span class='badge badge-secondary tag'>tag</span>
+                    <span class='badge badge-secondary' id='language'></span>
                 </div>
             </div>
         </div>
@@ -82,16 +95,14 @@
                     <img src='./img/face.png' class="img-thumbnail rouned-circle mx-lg-5" alt="금준호" />
                 </div>
                 <div class="col">
-                    <h2 class="text-left"><strong>금준호</strong></h2>
+                    <h2 class="text-left"><strong>iubns</strong></h2>
                     <h6 class="text-left">● 스마트 팩토리 회사에서 Vue + Node를 이용하여 웹 개발중
-                        <br />● 순천향대 컴퓨터 소프트웨어 공학과 3학년 휴학생
-                        <br />이메일 : iubns@naver.com , 휴대전화 : 010-8768-3842
+                        <br />이메일 : iubns@naver.com
                     </h6>
                     <h6>-코딩이 재미있어서 이것저것 만들다보니 많은 프로그램을 만들게 되었습니다.
                         <br />지금까지 만들었던 프로그램중 일부를 소개합니다!-
                     </h6>
                     <h6>주로 C#으로 개발을 하지만 다른 언어들(JAVA, PHP, JS, SQL)도 자주 사용합니다.</h6>
-                    <h6>*본 페이지는 2019년 8월 이후로 업데이트가 되지 않고 있습니다.</h6>
                 </div>
             </div>
         </div>
@@ -114,32 +125,6 @@
     <br />
     <div id="projectList">
 
-        <project-card youtube="https://www.youtube.com/embed/AI8HsfWP4B8" title="합성 명제 진리표 출력 프로그램(콘솔)"
-            subject="개인 프로젝트" description="and, or, not, implication연산자와 n개의 피연산자로 이루어진 논리식이 입력으로 주어질때 연산자들의 우선순위에 따라 진리표를 출력하는 프로그램입니다.
-            연산자의 우선순위는 ! & | > 순입니다." time="제작기간 : 2주, 제작시기 : 2019년 5월" tag="c">
-
-        </project-card>
-    </div>
-    <div class="container bs-docs-container">
-
-
-    </div>
-    <div class="container bs-docs-container">
-
-        <div class='row alert alert-dark'>
-            <div class='col-sm-4 embed-responsive embed-responsive-16by9'>
-                <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/AI8HsfWP4B8'></iframe>
-            </div>
-            <div class='col'>
-                <h5><strong>합성 명제 진리표 출력 프로그램(콘솔)</strong><span class='badge badge-pill badge-secondary'>개인 프로젝트</span>
-                </h5>
-                <h6>and, or, not, implication연산자와 n개의 피연산자로 이루어진 논리식이 입력으로 주어질때 연산자들의 우선순위에 따라 진리표를 출력하는 프로그램입니다.<br />
-                    연산자의 우선순위는 ! & | > 순입니다.</h6>
-                <p style='margin:8px;'>제작기간 : 2주, 제작시기 : 2019년 5월</p>
-                <hr class='my-1' />
-                <span class='badge badge-secondary'>C</span>
-            </div>
-        </div>
     </div>
 </body>
 

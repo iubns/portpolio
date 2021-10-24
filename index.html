@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width" , initial-scale="1">
     <title>금준호 포트폴리오</title>
     <link rel="stylesheet" href="./css/bootstrap.css">
+
+    <link rel="stylesheet" href="./css/index.css">
     <script src="./data.js"></script>
     <script type="text/javascript">
         function orderChange() {
@@ -67,23 +69,22 @@
 
 <body onload="loadData()">
     <template id="cardTempalte">
-        <link rel="stylesheet" href="./css/bootstrap.css">
-        <div class="container bs-docs-container">
+        <link rel="stylesheet" href="./css/card.css">
 
-            <div class='row alert alert-dark'>
-                <div class='col-sm-4 embed-responsive embed-responsive-16by9'>
-                    <iframe class='embed-responsive-item' id='url'></iframe>
+        <div class="container">
+            <div class='youtube'>
+                <iframe id='url'></iframe>
+            </div>
+            <div class='content'>
+                <div class="title">
+                    <strong id='title'></strong>
                 </div>
-                <div class='col'>
-                    <h5>
-                        <strong id='title'></strong>
-                        <span class='badge badge-pill badge-secondary type'></span>
-                    </h5>
-                    <h6 id="explanation"></h6>
-                    <p style='margin:8px;' id="date"></p>
-                    <hr class='my-1' />
-                    <span class='badge badge-secondary' id='language'></span>
+                <div class="tag-area">
+                    <span class='type' id='type'></span>
+                    <span class='language' id='language'></span>
                 </div>
+                <div id="explanation" class="explanation"></div>
+                <div id="date" class="date"></div>
             </div>
         </div>
     </template>
@@ -106,24 +107,24 @@
                 </div>
             </div>
         </div>
-
-        <div class="container">
-        </div>
-        <h4 class="text-left" style='float:left'>
-            프로젝트
-        </h4>
-        <select class="btn btn-info mx-lg-2 dropdown-toggle" style='float:both;' onchange='orderChange()' id='order'>
-
-            <div class='dropdown'>
-                <div class='dropdown-menu' aria-labelledby='dropdownMenuLink'>
-                    <option style='color:white;' class='dropdown-item'>규모순</option>
-                    <option style='color:white;' class='dropdown-item' selected='selected'>최신순</option>
-                </div>
-            </div>
-        </select>
     </div>
-    <br />
-    <div id="projectList">
+    <!--
+    <div class="filter-list">
+        <div>
+            all
+        </div>
+        <div>
+            console
+        </div>
+        <div>
+            web
+        </div>
+        <div>
+            mobile
+        </div>
+    </div>
+    -->
+    <div id="projectList" class="project-list">
 
     </div>
 </body>

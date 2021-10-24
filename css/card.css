@@ -1,0 +1,66 @@
+.container{
+    background-color: #EEEEEE;
+    border-radius: 0.5rem;
+    margin: 2rem;
+    width: 20rem;
+    border: 1px #DDDDDD solid;
+}
+
+.container:hover{
+    transform: scale(1.2);
+}
+
+.youtube:hover{
+    transform: scale(1.5);
+}
+
+iframe {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    width: 100%;
+    border: 0px;
+}
+
+iframe:hover{
+    border-radius: 0.5rem;
+}
+
+.content{
+    padding: 1rem;
+}
+
+.title{
+    font-size: 1rem;
+}
+
+.tag-area{
+    font-size: 0.7rem;
+    margin-top: 1rem;
+}
+
+.type{
+    background-color: #A9A0FC;
+    border-radius: .5rem;
+    padding: 0.2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.language{
+    background-color: #A9A0FC;
+    border-radius: .5rem;
+    padding: 0.2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.explanation{
+    margin-top: 1rem;
+    height: 11rem;
+    font-size: 0.8rem;
+    overflow: hidden;
+}
+
+.date{
+    font-size: 0.8rem;
+}

@@ -1,0 +1,24 @@
+body {
+    background-color: #FFFFFF;
+}
+
+.filter-list{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.filter-list div{
+    margin-inline: 5rem;
+    background-color: #BAE7AF;
+    padding: .4rem;
+    border-radius: 0.5rem;
+}
+
+.project-list{
+    padding: 3rem;
+    width: 100vw;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

@@ -1,6 +1,8 @@
 body {
     background-color: #726A95;
     margin: 0px;
+    width: 100%;
+    height: var(--vh, 1vh) * 100;
 }
 
 .top-container{
@@ -13,9 +15,7 @@ body {
     width: 100%;
     height: 100%;
     justify-content: center;
-
     padding-top: 20rem;
-
 }
 
 .slogan-text{
@@ -56,22 +56,14 @@ body {
     }
 }
 
-.filter-list{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-
-.filter-list div{
-    margin-inline: 5rem;
-    background-color: #BAE7AF;
-    padding: .4rem;
-    border-radius: 0.5rem;
-}
-
 .project-list{
+    padding-top: 5rem;
     width: 100vw;
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+project-card{
+    height: 100%;
 }

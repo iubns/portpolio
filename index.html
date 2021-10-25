@@ -24,6 +24,49 @@
             }
         }
 
+        let whleePreventEvent = function (e) {
+            e.preventDefault();
+        }
+
+        function turnOffWheel() {
+            window.addEventListener("wheel", whleePreventEvent, { passive: false });
+        }
+
+        function turnOnWheel() {
+            window.removeEventListener('wheel', whleePreventEvent)
+        }
+
+        turnOnWheel()
+
+        document.addEventListener('wheel', async (event) => {
+            //wheel의 위치가 이동 될 때까지 대기
+            await new Promise(resolve => setTimeout(resolve, 100))
+            let projectListTop = document.getElementById('projectList').offsetTop
+            if (window.scrollY > projectListTop) {
+                return
+            }
+
+            if (event.deltaY > 0) {
+                gotoProjectList()
+                turnOnWheel()
+            } else {
+                gotoTop()
+                turnOffWheel()
+            }
+        })
+
+        function gotoProjectList() {
+            let projectList = document.getElementById('projectList')
+            projectList.scrollIntoView({ behavior: 'smooth', block: "start" })
+        }
+
+        function gotoTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        }
+
         class ProjectCard extends HTMLElement {
             proejctData = {}
 

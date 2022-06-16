@@ -1,5 +1,15 @@
 var portfolioData = [
     {
+        "id": "17",
+        "url": "https:\/\/www.youtube.com\/embed\/45RcgbPwZH8",
+        "title": "벤포트 법칙 계산기 (웹)",
+        "type": "개인 프로젝트",
+        "explanation": "자연에서 존재하는 수의 첫번째 자리는 항상 같은 비율로 나타난다는 벤포드 법칙을 각종 데이터에 적용한 결과를 보여줍니다. 데이터는 공공 데이터 포털에서 가져옵니다.",
+        "date": "제작기간 : 3일, 제작시기 : 2022년 6월",
+        "language": "REACT",
+        "size": "4"
+    },
+    {
         "id": "16",
         "url": "https:\/\/www.youtube.com\/embed\/AI8HsfWP4B8",
         "title": "\ud569\uc131 \uba85\uc81c \uc9c4\ub9ac\ud45c \ucd9c\ub825 \ud504\ub85c\uadf8\ub7a8 (\ucf58\uc194)",
